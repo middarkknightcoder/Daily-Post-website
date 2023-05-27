@@ -1,0 +1,22 @@
+<%- include('partials/header') -%>
+
+    <h1>Home</h1>
+    <p>
+        <%=startingContent%>
+    </p>
+
+    <%#Here you can also used for loop%>
+
+        <% postsArr.forEach(function(post){ %>
+            <h1>
+
+                <%=post.Title%>
+
+            </h1>
+            <p>
+                <%=post.Content.substring(0 ,100) + " ..." %>
+                    <a href="/post/<%=post.Title%>">Read More</a>
+            </p>
+            <%})%>
+
+                <%- include('partials/footer') -%>
